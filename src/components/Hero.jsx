@@ -34,7 +34,7 @@ const lightTheme = {
 const theme = darkMode ? darkTheme : lightTheme;
 
   return (
-    <div className='relative overflow-hidden min-h-screen flex flex-col pl-20' id='about'>
+    <div className='relative overflow-hidden min-h-screen flex flex-col sm:pl-20' id='about'>
      <section
      id='home'
      data-aos = 'fade-up'
