@@ -79,7 +79,7 @@ className='text-3xl sm:text-4xl font-bold mb-3'>My
                  </h3>
                  <p className='text-sm mb-3 dark:text-white text-black ' >{project.desc}</p>
                    </div>
-                   <div className='flex mb-4 gap-8 pl-10'
+                   <div className='flex mb-4 gap-8 pl-10 sm:flex-row flex-col justify-start items-start'
                    data-aos = 'fade-up'
                    data-aos-delay = '100'>
                     <a href={project.giturl}>
