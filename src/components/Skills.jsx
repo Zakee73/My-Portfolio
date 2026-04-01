@@ -40,7 +40,7 @@ const Skills = ({darkMode}) => {
     <motion.section
     id='skills'
     style={{backgroundColor: darkMode ? "#111827" : "#f9fafb"}}
-    className=' relative overflow-hidden pb-50'
+    className=' relative overflow-hidden pb-20'
     >
       <div className='py-14 relative overflow-hidden'>
         <div className='container px-5 py-4 mx-auto'>
