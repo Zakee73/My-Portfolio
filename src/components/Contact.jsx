@@ -14,13 +14,14 @@ const Contact = ({darkMode}) => {
            style={{color:darkMode ? "white" : "#1f2937"}}
            >Get In Touch</h2>
 
-           <form action="
-           " style={{background:darkMode
+           <form action="https://api.web3forms.com/submit" method="POST"
+            style={{background:darkMode
             ? "linear gradient(to right , #1f2937 , #111827)"
             : "linear gradient(to right , #ffffff , #f9fafb)",
             borderColor : darkMode ? '#374151' :  '#e5e7eb'
            }} className='rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border shadow-lg order-1 lg:order-2' data-aos = 'fade-left'>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 selection:gap-4 mb-3 sm:mb-4'>
+             <input type="hidden" name="access_key" value="0c95425b-d07d-4b5f-a0b1-6bda9dae0d2b"></input>
              <input 
              type="text"
              placeholder='Your Name'

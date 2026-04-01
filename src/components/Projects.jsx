@@ -11,23 +11,29 @@ const Projects = ({darkMode}) => {
         {
             id:1,
             title: 'Real Estate Website',
-            desc: 'One and only website for you',
+            desc: 'A full featured real estate platform showcasing dynamic property listings with functionality',
             image: assets.Realesate,
+            giturl: "https://github.com/Zakee73/Real-Estate-Project.git",
+            demourl : " https://real-estate-self-chi.vercel.app/",
             tags:['React' , 'Tailwind CSS' , 'Framer-motion']
         },
             {
             id:2,
             title: 'Weather App',
-            desc: 'One and only website for you',
+            desc: 'A real time weather application that delivers current conditions forecast using third-party API',
             image: assets.Weather,
+            giturl : " https://github.com/Zakee73/Weather_App.git",
+            demourl : " https://weatherapp-eight-tawny.vercel.app/",
             tags:['React' , 'Tailwind CSS' , 'Framer-motion']
         },
 
             {
             id:3,
             title: 'Simon-Says-Game Website',
-            desc: 'One and only website for you',
+            desc: 'An interactive memory challenge that test cognitive recall through an escalating sequence of lights',
             image: assets.SimonSays,
+            giturl : " ",
+            demourl : " ",
             tags:['React' , 'Tailwind CSS' , 'Framer-motion']
         },
     ]
@@ -73,12 +79,14 @@ className='text-3xl sm:text-4xl font-bold mb-3'>My
                  </h3>
                  <p className='text-sm mb-3 dark:text-white text-black ' >{project.desc}</p>
                    </div>
-                   <div className='flex mb-4'
+                   <div className='flex mb-4 gap-8 pl-10'
                    data-aos = 'fade-up'
-                   data-aos-delay = '300'>
-            <div className='text-center  h-10 w-fit m-auto rounded-xl bg-gray-700 px-10 justify-center items-center flex '><button className='flex gap-2'><img src={assets.github} className='h-5 w-5 ' /> Code</button> </div>
+                   data-aos-delay = '100'>
+                    <a href={project.giturl}>
+            <div className='text-center  h-10 w-fit m-auto rounded-xl bg-gray-700 px-10 justify-center items-center flex ' ><button className='flex gap-2'><img src={assets.github} className='h-5 w-5 ' /> Code</button> </div> </a>
+            <a href={project.demourl}>
                 <div className='text-center  h-10 w-fit m-auto rounded-xl bg-orange-400 px-10 justify-center items-center flex '><button className='flex gap-2'><span className=''><ExternalLinkIcon/></span>
-               Demo</button> </div>
+               Demo</button> </div> </a>
            
             </div>
          
