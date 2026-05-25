@@ -49,18 +49,21 @@ const Contact = ({darkMode}) => {
              <input type="hidden" name="access_key" value="0c95425b-d07d-4b5f-a0b1-6bda9dae0d2b"></input>
              <input 
              type="text"
+             name = "name"  
              placeholder='Your Name'
              className='w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text sm:text-base dark:bg-gray-700 transition-all border ' required
              />
 
               <input 
              type="email"
+             name = "email"  
              placeholder=' Email Address'
              className='w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text sm:text-base dark:bg-gray-700 transition-all border  ' required
              />
 
               <textarea
               rows={4}
+             name = "message"  
               placeholder='Your Message'
               className='w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text sm:text-base dark:bg-gray-700 transition-all border  ' required
              />
