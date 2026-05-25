@@ -2,31 +2,30 @@
 import React, { useState } from 'react'
 
 const Contact = ({darkMode}) => {
-   const [result, setResult] = useState("");
+  const [result, setResult] = useState("");
 
-    const onSubmit = async (event) => {
-        event.preventDefault();
-        setResult("Sending....");
-        const formData = new FormData(event.target);
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
 
-        formData.append("access_key", "0c95425b-d07d-4b5f-a0b1-6bda9dae0d2b");
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+    const data = await response.json();
 
-        const data = await response.json();
-
-        if (data.success) {
-            setResult("Form Submitted Successfully");
-            event.target.reset();
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
-        }
-    };
-  
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+      setTimeout(() => setResult(""), 3000);
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+      setTimeout(() => setResult(""), 3000);
+    }
+  };
   return (
    <section 
    id='contact'
@@ -66,7 +65,10 @@ const Contact = ({darkMode}) => {
               className='w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text sm:text-base dark:bg-gray-700 transition-all border  ' required
              />
              <button className='bg-orange-400 rounded-2xl h-10'>Send Message</button>
+            {result && <p className="mt-4 text-center">{result}</p>}
+
             </div>
+              
            </form>
         </div>
          <div className=' text-lg sm:text-xl text-center border-t pt-10 border-gray-600'>
