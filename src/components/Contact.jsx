@@ -64,7 +64,7 @@ const Contact = ({darkMode}) => {
               placeholder='Your Message'
               className='w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text sm:text-base dark:bg-gray-700 transition-all border  ' required
              />
-             <button className='bg-orange-400 rounded-2xl h-10'>Send Message</button>
+             <button onSubmit = {onSubmit} className='bg-orange-400 rounded-2xl h-10'>Send Message</button>
             </div>
            </form>
         </div>
