@@ -39,7 +39,8 @@ const Contact = ({darkMode}) => {
            style={{color:darkMode ? "white" : "#1f2937"}}
            >Get In Touch</h2>
 
-           <form action="https://api.web3forms.com/submit" method="POST"
+           <form onSubmit = {onSubmit} 
+              action="https://api.web3forms.com/submit" method="POST"
             style={{background:darkMode
             ? "linear gradient(to right , #1f2937 , #111827)"
             : "linear gradient(to right , #ffffff , #f9fafb)",
@@ -64,7 +65,7 @@ const Contact = ({darkMode}) => {
               placeholder='Your Message'
               className='w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg text sm:text-base dark:bg-gray-700 transition-all border  ' required
              />
-             <button onSubmit = {onSubmit} className='bg-orange-400 rounded-2xl h-10'>Send Message</button>
+             <button className='bg-orange-400 rounded-2xl h-10'>Send Message</button>
             </div>
            </form>
         </div>
